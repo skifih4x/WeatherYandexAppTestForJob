@@ -17,6 +17,10 @@
 		00F87D3C2889C2DA007EECDE /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F87D3B2889C2DA007EECDE /* WeatherModel.swift */; };
 		00F87D3E2889CBBC007EECDE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F87D3D2889CBBC007EECDE /* NetworkManager.swift */; };
 		00F87D402889CE51007EECDE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F87D3F2889CE51007EECDE /* Weather.swift */; };
+		00F87D422889D759007EECDE /* GetCitiesWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F87D412889D759007EECDE /* GetCitiesWeather.swift */; };
+		00F87D442889DBCE007EECDE /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F87D432889DBCE007EECDE /* ListCell.swift */; };
+		00F87D472889E0DF007EECDE /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 00F87D462889E0DF007EECDE /* SwiftSVG */; };
+		00FB31E22889F2C9003AA564 /* AddCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB31E12889F2C9003AA564 /* AddCity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,9 @@
 		00F87D3B2889C2DA007EECDE /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		00F87D3D2889CBBC007EECDE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		00F87D3F2889CE51007EECDE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		00F87D412889D759007EECDE /* GetCitiesWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCitiesWeather.swift; sourceTree = "<group>"; };
+		00F87D432889DBCE007EECDE /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		00FB31E12889F2C9003AA564 /* AddCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F87D472889E0DF007EECDE /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +96,9 @@
 			children = (
 				00F87D3B2889C2DA007EECDE /* WeatherModel.swift */,
 				00F87D3F2889CE51007EECDE /* Weather.swift */,
+				00F87D412889D759007EECDE /* GetCitiesWeather.swift */,
+				00F87D432889DBCE007EECDE /* ListCell.swift */,
+				00FB31E12889F2C9003AA564 /* AddCity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +146,9 @@
 			dependencies = (
 			);
 			name = WeatherYandexAppTestForJob;
+			packageProductDependencies = (
+				00F87D462889E0DF007EECDE /* SwiftSVG */,
+			);
 			productName = WeatherYandexAppTestForJob;
 			productReference = 00F87D1B2889B113007EECDE /* WeatherYandexAppTestForJob.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 00F87D122889B113007EECDE;
+			packageReferences = (
+				00F87D452889E0DF007EECDE /* XCRemoteSwiftPackageReference "SwiftSVG" */,
+			);
 			productRefGroup = 00F87D1C2889B113007EECDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,9 +209,12 @@
 			files = (
 				00F87D3E2889CBBC007EECDE /* NetworkManager.swift in Sources */,
 				00F87D1F2889B113007EECDE /* AppDelegate.swift in Sources */,
+				00F87D422889D759007EECDE /* GetCitiesWeather.swift in Sources */,
 				00F87D332889B155007EECDE /* WeatherViewController.swift in Sources */,
 				00F87D212889B113007EECDE /* SceneDelegate.swift in Sources */,
 				00F87D352889BFE7007EECDE /* DetailsViewController.swift in Sources */,
+				00FB31E22889F2C9003AA564 /* AddCity.swift in Sources */,
+				00F87D442889DBCE007EECDE /* ListCell.swift in Sources */,
 				00F87D3C2889C2DA007EECDE /* WeatherModel.swift in Sources */,
 				00F87D402889CE51007EECDE /* Weather.swift in Sources */,
 			);
@@ -414,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00F87D452889E0DF007EECDE /* XCRemoteSwiftPackageReference "SwiftSVG" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchoe/SwiftSVG.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00F87D462889E0DF007EECDE /* SwiftSVG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00F87D452889E0DF007EECDE /* XCRemoteSwiftPackageReference "SwiftSVG" */;
+			productName = SwiftSVG;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00F87D132889B113007EECDE /* Project object */;
 }

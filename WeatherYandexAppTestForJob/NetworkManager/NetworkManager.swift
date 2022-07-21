@@ -11,9 +11,9 @@ struct NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchWeather() {
+    func fetchWeather(latitude: Double,longitude: Double ,completion: @escaping (Weather) -> Void) {
         
-        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=59.937422&lon=30.343328"
+        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=\(latitude)&lon=\(longitude)"
                                                                     
         guard let url = URL(string: urlString) else { return }
         
@@ -27,7 +27,23 @@ struct NetworkManager {
                 return
             }
             print(String(data: data, encoding: .utf8)!)
-
+            if let weather = self.parseJSOn(withData: data) {
+                completion(weather)
+            }
         }.resume()
+    }
+    
+    func parseJSOn(withData data: Data) -> Weather? {
+        let decoder = JSONDecoder()
+        do {
+            let weatherData = try decoder.decode(WeatherData.self, from: data)
+            guard let weather = Weather(weatherData: weatherData) else {
+                return nil
+            }
+            return weather
+        } catch {
+            print(error)
+        }
+        return nil
     }
 }
